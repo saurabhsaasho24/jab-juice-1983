@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ================================
+   JAB JUICE - BRAND VARIABLES
+================================ */
+
+:root {
+  /* Background Colors */
+  --background: #ffcf00;
+  --background-light: #fff6c7;
+  --background-muted: #fff0a3;
+  --background-dark: #f2b900;
+
+  /* Text Colors */
+  --foreground: #064e36;
+  --heading: #064e36;
+  --text: #183b2d;
+  --text-muted: #526b5e;
+
+  /* Brand Colors */
+  --primary: #064e36;
+  --primary-hover: #033b29;
+  --primary-light: #e1f0d5;
+
+  --secondary: #00a9e8;
+  --secondary-hover: #008bc4;
+  --secondary-light: #d9f5ff;
+
+  --accent: #ffcf00;
+  --accent-hover: #f2b900;
+  --accent-light: #fff2a6;
+
+  /* Supporting Colors */
+  --white: #ffffff;
+  --black: #111111;
+  --success: #23834a;
+  --border: rgba(6, 78, 54, 0.18);
+
+  /* Typography */
+  --font-primary: var(--font-heading);
+  --font-secondary: var(--font-body);
+
+  /* Layout */
+  --container-width: 1280px;
+  --section-spacing: 100px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(6, 78, 54, 0.08);
+  --shadow-md: 0 8px 24px rgba(6, 78, 54, 0.12);
+  --shadow-lg: 0 16px 40px rgba(6, 78, 54, 0.16);
+}
+
+/* ================================
+   TAILWIND THEME
+================================ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-light: var(--background-light);
+  --color-background-muted: var(--background-muted);
+  --color-background-dark: var(--background-dark);
+
+  --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-success: var(--success);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-primary);
+  --font-body: var(--font-secondary);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+}
+
+/* ================================
+   BASE STYLES
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-secondary), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary), sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================================
+   SELECTION
+================================ */
+
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* ================================
+   RESPONSIVE SPACING
+================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --section-spacing: 64px;
+  }
+}
+
+
