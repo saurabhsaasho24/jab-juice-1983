@@ -42,8 +42,8 @@ export default function HeroSection() {
             </div>
 
             {/* Hero Content */}
-            <Container className="relative flex min-h-screen min-h-[100dvh] items-start justify-center lg:!px-0 pt-24 pb-12 sm:items-center sm:justify-start sm:pt-32 sm:pb-20 lg:pt-36">
-                <div className="flex flex-col items-center text-center mx-auto max-w-xl space-y-4 text-white sm:items-start sm:text-left sm:mx-0 sm:space-y-8">
+            <Container className="relative flex min-h-screen min-h-[100dvh] items-start justify-center lg:!px-0 pt-20 pb-8 sm:items-center sm:justify-start sm:pt-32 sm:pb-20 lg:pt-36">
+                <div className="flex flex-col items-center text-center mx-auto max-w-xl space-y-3 text-white sm:items-start sm:text-left sm:mx-0 sm:space-y-8">
                     {/* Eyebrow */}
                     <Text
                         size="sm"
@@ -58,7 +58,7 @@ export default function HeroSection() {
                         as="h1"
                         size="xl"
                         color="white"
-                        className="text-center sm:text-left max-w-[650px] text-4xl uppercase leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl"
+                        className="text-center sm:text-left max-w-[650px] text-3xl xs:text-4xl uppercase leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl"
                     >
                         Bring on the
                         <span className="mt-1 block text-[#ffcf00] sm:mt-2">
@@ -70,20 +70,30 @@ export default function HeroSection() {
                     <Text
                         size="default"
                         color="white"
-                        className="text-center sm:text-left max-w-md text-sm leading-relaxed text-white/95 sm:text-base md:text-lg"
+                        className="text-center sm:text-left max-w-sm sm:max-w-md text-xs xs:text-sm leading-relaxed text-white/95 sm:text-base md:text-lg"
                     >
                         Refresh your moments with vibrant tropical flavors and the
                         unmistakable spirit of JAB Juice. Every sip brings a little more
                         sunshine, celebration, and good energy.
                     </Text>
 
-                    {/* CTA Buttons - hidden on mobile, visible on sm: and up */}
-                    <div className="hidden sm:flex sm:flex-row sm:flex-wrap gap-3 pt-2">
-                        <Button href="/shop" variant="primary" size="lg">
+                    {/* CTA Buttons - visible on all screen sizes */}
+                    <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-2.5 pt-1 sm:pt-2">
+                        <Button
+                            href="/shop"
+                            variant="primary"
+                            size="base"
+                            className="h-10 px-5 text-xs font-bold sm:h-14 sm:px-9 sm:text-base"
+                        >
                             Shop Now
                         </Button>
 
-                        <Button href="/about" variant="secondary" size="lg">
+                        <Button
+                            href="/about"
+                            variant="secondary"
+                            size="base"
+                            className="h-10 px-5 text-xs font-bold sm:h-14 sm:px-9 sm:text-base"
+                        >
                             Discover JAB
                         </Button>
                     </div>

@@ -300,144 +300,194 @@ export default function JabExperienceSection() {
               Mobile Collage
           ===================================== */}
 
-                    <div className="grid grid-cols-2 gap-3 md:hidden">
+                    <div className="flex flex-col gap-4 md:hidden">
+                        {/* Mobile Section Header */}
+                        <div className="text-center pt-2 pb-1">
+                            <div className="mb-3 flex justify-center">
+                                <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-3.5 py-1.5 shadow-sm backdrop-blur-sm">
+                                    <span className="size-2 rounded-full bg-primary" />
+                                    <Text
+                                        size="sm"
+                                        color="primary"
+                                        className="text-xs font-bold uppercase tracking-[0.2em]"
+                                    >
+                                        The JAB Experience
+                                    </Text>
+                                </span>
+                            </div>
 
-                        {/* Yellow Intro Panel */}
+                            <Heading
+                                as="h2"
+                                size="xl"
+                                align="center"
+                                className="text-4xl uppercase leading-[0.9] tracking-tight"
+                            >
+                                Real Flavors.
+                                <span className="mt-1 block text-[#c7a34f]">
+                                    Brighter Days.
+                                </span>
+                            </Heading>
 
-                        <div className="relative col-span-2 min-h-[250px] overflow-hidden rounded-[1.75rem] bg-[#ffcf00] p-5 sm:min-h-[300px] sm:p-7">
+                            <Text
+                                size="default"
+                                color="muted"
+                                align="center"
+                                className="mx-auto mt-3 max-w-sm text-sm leading-relaxed"
+                            >
+                                A splash of tropical flavor, a little sunshine, and a whole
+                                lot of good energy. Welcome to the world of JAB Juice.
+                            </Text>
+                        </div>
 
+                        {/* Featured Carnival Float Hero Photo (Desktop Center Feature) */}
+                        <div className="relative aspect-[16/11] w-full overflow-hidden rounded-[1.75rem] bg-[#f5edda] shadow-md">
+                            <Image
+                                src="/assets/about-main.jpg"
+                                alt="JAB Juice Carnival celebration float"
+                                fill
+                                priority
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover"
+                            />
+                            <div className="absolute bottom-3 left-3 rounded-full bg-[#064e36]/85 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md shadow">
+                                Carnival Spirit
+                            </div>
+                        </div>
+
+                        {/* Yellow Feature Panel with Clean Side-by-Side Layout (about-1.png) */}
+                        <div className="relative overflow-hidden rounded-[1.75rem] bg-[#ffcf00] p-5 sm:p-7 shadow-sm">
                             <div
                                 aria-hidden="true"
-                                className="absolute -right-10 -top-12 size-48 rounded-full border-[28px] border-[#064e36]/10"
+                                className="pointer-events-none absolute -right-10 -top-10 size-44 rounded-full border-[24px] border-[#064e36]/10"
                             />
 
-                            <div className="relative z-10 max-w-[65%]">
+                            <div className="relative z-10 flex items-center justify-between gap-3">
+                                <div className="min-w-0 flex-1">
+                                    <Text
+                                        size="sm"
+                                        className="text-xs font-bold uppercase tracking-[0.18em] text-[#064e36]"
+                                    >
+                                        Made for the moment
+                                    </Text>
+
+                                    <Heading
+                                        as="h3"
+                                        size="lg"
+                                        className="mt-2 text-3xl font-black uppercase leading-[0.95] text-[#064e36]"
+                                    >
+                                        Good drinks.
+                                        <span className="mt-1 block text-white">
+                                            Good times.
+                                        </span>
+                                    </Heading>
+
+                                    <Text
+                                        size="sm"
+                                        className="mt-2.5 max-w-[200px] text-xs leading-5 text-[#064e36]/85"
+                                    >
+                                        Bring the JAB Juice energy to every moment.
+                                    </Text>
+                                </div>
+
+                                <div className="relative h-40 w-24 shrink-0 overflow-visible">
+                                    <Image
+                                        src="/assets/about-1.png"
+                                        alt="JAB Juice Carnival Rum bottle"
+                                        fill
+                                        sizes="100px"
+                                        className="object-contain drop-shadow-md"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 2-Column Mobile Grid for Moments & Legacy */}
+                        <div className="grid grid-cols-2 gap-3">
+                            {/* Carnival Dancer with JAB bottle (about-2.jpg) */}
+                            <ImageTile
+                                src="/assets/about-2.jpg"
+                                alt="Carnival celebration dancer with JAB bottle"
+                                className="aspect-square rounded-[1.5rem] bg-[#f8e4d7] shadow-sm"
+                                imageClassName="object-cover"
+                            />
+
+                            {/* Dark Green Message Panel */}
+                            <div className="relative flex aspect-square flex-col justify-center overflow-hidden rounded-[1.5rem] bg-[#064e36] p-4 text-white shadow-sm">
+                                <div
+                                    aria-hidden="true"
+                                    className="pointer-events-none absolute -bottom-10 -right-10 size-32 rounded-full border-[18px] border-white/10"
+                                />
+
+                                <div className="relative z-10">
+                                    <Text
+                                        size="sm"
+                                        className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffcf00]"
+                                    >
+                                        The JAB feeling
+                                    </Text>
+
+                                    <Heading
+                                        as="h3"
+                                        size="base"
+                                        color="white"
+                                        className="mt-2 text-2xl uppercase leading-tight"
+                                    >
+                                        Sip into
+                                        <span className="block text-[#ffcf00]">
+                                            sunshine.
+                                        </span>
+                                    </Heading>
+                                </div>
+                            </div>
+
+                            {/* Since 1983 Panel */}
+                            <div className="relative flex aspect-square flex-col justify-center rounded-[1.5rem] border border-primary/10 bg-white/90 p-4 shadow-sm backdrop-blur-sm">
                                 <Text
                                     size="sm"
                                     color="primary"
-                                    className="font-bold uppercase tracking-[0.18em]"
+                                    className="text-[11px] font-bold uppercase tracking-[0.15em]"
                                 >
-                                    The JAB Experience
+                                    Since
                                 </Text>
 
                                 <Heading
                                     as="h3"
                                     size="lg"
-                                    className="mt-4 text-4xl uppercase leading-[0.92] sm:text-5xl"
+                                    className="mt-0.5 text-4xl font-black text-[#c7a34f]"
                                 >
-                                    Real flavors.
-                                    <span className="block text-white">
-                                        Brighter days.
-                                    </span>
+                                    1983
                                 </Heading>
 
                                 <Text
                                     size="sm"
-                                    color="default"
-                                    className="mt-4 max-w-[230px]"
+                                    color="muted"
+                                    className="mt-1 text-xs uppercase tracking-wider"
                                 >
-                                    Tropical flavor and good energy for every kind of moment.
+                                    A legacy of flavor
                                 </Text>
                             </div>
 
-                            {/* Bottle Image */}
-
-                            <Image
+                            {/* Two Rum Bottles on Shell Rock (about-3.jpg) */}
+                            <ImageTile
                                 src="/assets/about-3.jpg"
-                                alt="JAB Juice bottle"
-                                width={240}
-                                height={360}
-                                className="absolute -bottom-4 -right-5 h-[75%] w-[43%] object-contain"
+                                alt="JAB Juice Carnival Rum bottles on shell rock"
+                                className="aspect-square rounded-[1.5rem] bg-[#f5edda] shadow-sm"
+                                imageClassName="object-cover"
                             />
-                        </div>
 
-                        {/* Pineapple Product Image */}
-
-                        <ImageTile
-                            src="/assets/about-4.jpg"
-                            alt="JAB Juice pineapple drink"
-                            priority
-                            className="aspect-[4/5] rounded-[1.5rem] bg-[#f5edda]"
-                            imageClassName="object-contain p-2"
-                        />
-
-                        {/* Passion Fruit Product Image */}
-
-                        <ImageTile
-                            src="/images/jab-passion-fruit.webp"
-                            alt="JAB Juice passion fruit drink"
-                            className="aspect-[4/5] rounded-[1.5rem] bg-[#f8e4d7]"
-                            imageClassName="object-contain p-2"
-                        />
-
-                        {/* Dark Green Message Panel */}
-
-                        <div className="relative col-span-2 flex min-h-[170px] items-center justify-between gap-4 overflow-hidden rounded-[1.5rem] bg-[#064e36] p-5 text-white sm:p-7">
-
-                            <div className="relative z-10 max-w-[75%]">
-                                <Text
-                                    size="sm"
-                                    color="white"
-                                    className="font-bold uppercase tracking-[0.2em]"
-                                >
-                                    Good drinks. Good times.
-                                </Text>
-
-                                <Heading
-                                    as="h3"
-                                    size="base"
-                                    color="white"
-                                    className="mt-3 text-3xl uppercase sm:text-4xl"
-                                >
-                                    Bring on the
-                                    <span className="block text-[#ffcf00]">
-                                        good vibes.
-                                    </span>
-                                </Heading>
+                            {/* Blue Pouches & Rum Bottle (about-4.jpg) */}
+                            <div className="relative col-span-2 aspect-[16/9] overflow-hidden rounded-[1.5rem] bg-[#ffcf00]/30 shadow-sm">
+                                <Image
+                                    src="/assets/about-4.jpg"
+                                    alt="JAB Juice pouches and bottle"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    className="object-cover"
+                                />
+                                <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+                                    Tropical Blends
+                                </div>
                             </div>
-
-                            <div
-                                aria-hidden="true"
-                                className="absolute -bottom-20 -right-10 size-48 rounded-full border-[30px] border-white/10"
-                            />
-                        </div>
-
-                        {/* Repeated Bottle Image */}
-
-                        <ImageTile
-                            src="/images/jab-bottle.webp"
-                            alt="JAB Juice bottle close-up"
-                            className="aspect-square rounded-[1.5rem] bg-[#ffcf00]/40"
-                            imageClassName="object-contain p-3"
-                        />
-
-                        {/* Since 1983 Panel */}
-
-                        <div className="flex aspect-square flex-col justify-center rounded-[1.5rem] border border-primary/10 bg-white/90 p-4 backdrop-blur-sm">
-
-                            <Text
-                                size="sm"
-                                color="primary"
-                                className="font-bold uppercase tracking-[0.15em]"
-                            >
-                                Est.
-                            </Text>
-
-                            <Heading
-                                as="h3"
-                                size="lg"
-                                className="mt-1 text-5xl text-[#c7a34f] sm:text-6xl"
-                            >
-                                1983
-                            </Heading>
-
-                            <Text
-                                size="sm"
-                                color="muted"
-                                className="mt-2 uppercase tracking-wider"
-                            >
-                                The JAB spirit
-                            </Text>
                         </div>
                     </div>
                 </div>

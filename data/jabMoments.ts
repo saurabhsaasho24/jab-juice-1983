@@ -47,7 +47,7 @@ export const jabMoments: JabMoment[] = [
         instagramUrl: "https://www.instagram.com/jabjuice1983/",
         featured: true,
         aspectRatio: "portrait",
-        gridSpan: "lg:col-span-1 lg:row-span-2 sm:col-span-1 sm:row-span-2 min-h-[460px] lg:min-h-[520px]",
+        gridSpan: "row-span-2 sm:row-span-2 lg:row-span-2 sm:col-span-1 lg:col-span-1 min-h-[440px] lg:min-h-[520px]",
     },
     {
         id: 2,
@@ -136,7 +136,7 @@ export const jabMoments: JabMoment[] = [
         date: "3d ago",
         instagramUrl: "https://www.instagram.com/jabjuice1983/",
         aspectRatio: "portrait",
-        gridSpan: "lg:col-span-1 lg:row-span-2 sm:col-span-1 sm:row-span-2 min-h-[460px] lg:min-h-[520px]",
+        gridSpan: "row-span-2 sm:row-span-2 lg:row-span-2 sm:col-span-1 lg:col-span-1 min-h-[440px] lg:min-h-[520px]",
     },
     {
         id: 7,

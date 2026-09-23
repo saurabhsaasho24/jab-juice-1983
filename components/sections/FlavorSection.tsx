@@ -118,9 +118,9 @@ export default function FlavorSection() {
                             swiperRef.current = swiper;
                         }}
                         loop
-                        centeredSlides
-                        slidesPerView="auto"
-                        spaceBetween={24}
+                        centeredSlides={true}
+                        slidesPerView={1.22}
+                        spaceBetween={16}
                         speed={700}
                         autoplay={{
                             delay: 3000,
@@ -133,46 +133,50 @@ export default function FlavorSection() {
                             480: {
                                 slidesPerView: 2.2,
                                 spaceBetween: 18,
+                                centeredSlides: false,
                             },
                             640: {
                                 slidesPerView: 2.8,
                                 spaceBetween: 20,
+                                centeredSlides: false,
                             },
                             1024: {
                                 slidesPerView: 3.5,
                                 spaceBetween: 24,
+                                centeredSlides: false,
                             },
                             1440: {
                                 slidesPerView: 4.2,
                                 spaceBetween: 24,
+                                centeredSlides: false,
                             },
                         }}
                         className="product-swiper !overflow-visible"
                     >
                         {flavors.map((flavor, index) => (
                             <SwiperSlide key={`${flavor.name}-${index}`} className="h-auto pb-6">
-                                <article className="group h-full overflow-hidden rounded-[2rem] bg-white shadow-sm transition-shadow duration-500 hover:shadow-xl">
+                                <article className="group flex h-full flex-col overflow-hidden rounded-[2rem] bg-white shadow-sm transition-shadow duration-500 hover:shadow-xl">
                                     {/* Product image */}
                                     <div
-                                        className={`relative aspect-[4/3] overflow-hidden ${flavor.background}`}
+                                        className={`relative aspect-[4/3] w-full overflow-hidden ${flavor.background}`}
                                     >
                                         <Image
                                             src={flavor.image}
                                             alt={`JAB Juice ${flavor.name}`}
                                             fill
                                             unoptimized
-                                            sizes="(max-width: 640px) 75vw, (max-width: 1024px) 40vw, 28vw"
+                                            sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 28vw"
                                             className="object-contain p-6 transition-transform duration-700 group-hover:scale-105 sm:p-8"
                                         />
                                     </div>
 
                                     {/* Product details */}
-                                    <div className="flex items-center justify-between gap-4 p-5 sm:p-6">
-                                        <div>
+                                    <div className="flex flex-1 items-center justify-between gap-3 bg-white p-5 sm:p-6">
+                                        <div className="min-w-0 flex-1">
                                             <Heading
                                                 as="h3"
                                                 size="md"
-                                                className="mt-2 uppercase leading-tight text-[#064e36]"
+                                                className="truncate text-lg font-black uppercase leading-tight text-[#064e36] sm:text-xl"
                                             >
                                                 {flavor.name}
                                             </Heading>
@@ -181,7 +185,7 @@ export default function FlavorSection() {
                                         <Link
                                             href="/products"
                                             aria-label={`Explore ${flavor.name} JAB Juice`}
-                                            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ffcf00] text-2xl text-[#064e36] transition hover:bg-[#064e36] hover:text-white"
+                                            className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ffcf00] text-xl font-bold text-[#064e36] transition hover:bg-[#064e36] hover:text-white active:scale-95 shadow-sm"
                                         >
                                             <span aria-hidden="true">↗</span>
                                         </Link>
